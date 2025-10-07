@@ -3,9 +3,7 @@ Group work for App development.
 
  FoodieGenie – Android Food Ordering App
 
- Developed in **Android Studio Narwhal using Kotlin and a **RESTful API backend.
-
----
+ Developed in Android Studio Narwhal using Kotlin and a RESTful API backend.
 
 Overview
 
@@ -45,5 +43,5 @@ Version Control -Git
 
 Installation & Setup
  1. Clone the Repository
-git clone https://dev.azure.com/{your_organization}/{project_name}/_git/{repo_name}
+git clone https: https://github.com/Noeela/OPSCPROJECT.git
 
