@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background -->
+    <solid android:color="#FFFFFF"/>
+
+    <!-- Rounded top corners only -->
+    <corners
+        android:topLeftRadius="24dp"
+        android:topRightRadius="24dp" />
+
+    <!-- Slight elevation effect -->
+    <padding
+        android:top="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:bottom="0dp"/>
+
+</shape>

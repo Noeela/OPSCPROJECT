@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_track_map">
+
+    <!-- Google Map Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/layout_placeholder_map" />
+
+
+    <!-- Bottom Tracking Card -->
+    <LinearLayout
+        android:id="@+id/bottomCard"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_white_top"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your order is on the way!"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/tvDriverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver: Sipho M."
+            android:paddingStart="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvETA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated arrival: 15 mins"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnContactDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Driver"
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#E20B3A"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

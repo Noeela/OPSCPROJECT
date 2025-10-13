@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeDashboardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".Activity_home_dashboard">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Menu Button -->
+                <ImageView
+                    android:id="@+id/btnMenu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_menu"
+                    android:contentDescription="Menu"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Cart Button -->
+                <ImageView
+                    android:id="@+id/btnCart"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_cart_small"
+                    android:contentDescription="Cart"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <!-- WELCOME MESSAGE -->
+            <TextView
+                android:id="@+id/tvHello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="12dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Hello User." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What would you like to eat today?"
+                android:paddingStart="20dp"
+                android:paddingTop="4dp"
+                android:textSize="16sp"
+                android:textColor="#555" />
+
+            <!-- SEARCH BAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_margin="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/search_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/icSearch"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_search_small"
+                    app:tint="#181717"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:contentDescription="Search" />
+
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Search your food..."
+                    android:background="@android:color/transparent"
+                    android:textColor="#000"
+                    android:textColorHint="#999"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:focusable="true"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <!-- CATEGORY BUTTONS -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/btnMeals"
+                        android:layout_width="125dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Meals"
+                        android:textColor="#121212" />
+
+                    <Button
+                        android:id="@+id/btnSides"
+                        android:layout_width="126dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Sides"
+                        android:textColor="#121212" />
+
+                    <Button
+                        android:id="@+id/btnDrinks"
+                        android:layout_width="118dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Drinks"
+                        android:textColor="#121212" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- SPECIAL OFFERS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Specials"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Example Card -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:padding="8dp"
+                        android:elevation="4dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/food_background" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FoodGenie Special Sea Boil"
+                            android:textStyle="bold"
+                            android:paddingTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Now R100"
+                            android:textColor="#E53935"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#E53935"
+                            android:text="Add to cart"
+                            android:textColor="#fff"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+
+                    <!-- Add more cards as needed -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/colorEDEDED"
+        app:itemTextColor="@font/itim_ttf" />
+
+</LinearLayout>
+

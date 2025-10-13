@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_meals"
+        android:icon="@drawable/meals"
+        android:title="Meals" />
+
+    <item
+        android:id="@+id/nav_sides"
+        android:icon="@drawable/nuggets"
+        android:title="Sides" />
+
+    <item
+        android:id="@+id/nav_drinks"
+        android:icon="@drawable/drinks"
+        android:title="Drinks" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/search_bg"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_order_received"
+        android:title="Orders" />
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorites" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profile" />
+
+</menu>

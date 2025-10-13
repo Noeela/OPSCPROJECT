@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rewardsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back"
+        android:padding="8dp" />
+
+    <!-- Current Points -->
+
+    <!-- Wheel Image -->
+    <TextView
+        android:id="@+id/tvPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="179dp"
+        android:text="Your Points: 0"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Spin Button -->
+
+    <ImageView
+        android:id="@+id/imgWheel"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@+id/btnBack"
+        android:layout_marginTop="18dp"
+        android:contentDescription="Spin the Wheel"
+        android:scaleType="centerInside"
+        android:src="@drawable/wheel" />
+
+    <Button
+        android:id="@+id/btnSpin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgWheel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="SPIN"
+        android:textAllCaps="true"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingVertical="12dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Last Reward -->
+    <TextView
+        android:id="@+id/tvLastReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSpin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="You won: -"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="italic" />
+
+    <!-- Recommended Rewards Label -->
+    <TextView
+        android:id="@+id/tvRecommendedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLastReward"
+        android:layout_marginTop="24dp"
+        android:text="Recommended Rewards"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <!-- Recommended Rewards Container -->
+    <HorizontalScrollView
+        android:id="@+id/recommendedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRecommendedLabel"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/recommendedContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical"/>
+    </HorizontalScrollView>
+
+</RelativeLayout>
